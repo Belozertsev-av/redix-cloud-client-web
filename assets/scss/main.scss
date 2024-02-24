@@ -38,3 +38,37 @@ body{
     border-radius: $radius;
     padding: calc($padding/2) $padding;
 }
+.selected-view{
+    #icon{
+        rect{
+            fill-opacity: 1;
+        }
+    }
+    
+}
+.selected-item {
+    z-index: 2;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 3px solid $fontSecondaryColor;
+        background-color: rgba(11, 128, 255, 0.40);
+        width: 15px;
+        height: 15px;
+        border-radius: 5px;    
+    }
+    &::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: -7.5px;
+        left: -7.5px;
+        background-color: $selectedColor;
+        box-shadow: 2px 2px 2px $shadowColor;
+        border-radius: $radius;
+        width: 100px;
+        height: 115px;
+    }
+}
