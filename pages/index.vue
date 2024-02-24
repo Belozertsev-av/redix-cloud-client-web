@@ -25,7 +25,7 @@
     display: grid;
     grid-gap: $padding;
     grid-template-columns: 0.25fr 0.75fr;
-    grid-template-rows: 0.15fr 0.85fr;
+    grid-template-rows: 0.1fr 1fr;
   }
 
   &__sidebar {

@@ -28,3 +28,13 @@ body{
 .subtitle{
     @include adaptive-value('font-size', $subtitleSizeStart, $subtitleSizeEnd, 0);    
 }
+.link{
+    color: $fontSecondaryColor;
+    cursor: pointer;
+}
+.selected-folder {
+    background-color: $selectedColor;
+    box-shadow: 2px 2px 2px $shadowColor;
+    border-radius: $radius;
+    padding: calc($padding/2) $padding;
+}

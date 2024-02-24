@@ -8,12 +8,20 @@
     </div>
     <div class="sidebar__path">ivan_ivanov/</div>
     <div class="sidebar__folders-list">
-      <div class="sidebar__folder__item">
+      <div class="sidebar__folder-item">
         <div class="folder__item">
+          <div class="folder__icon">
+            <img src="~/assets/img/bin.png" alt="">
+          </div>
+          <div class="folder__name">Корзина</div>
+        </div>
+      </div>
+      <div class="sidebar__folder-item">
+        <div class="folder__item selected-folder">
           <div class="folder__icon">
             <img src="~/assets/img/folder_empty.png" alt="">
           </div>
-          <div class="folder__name">Новая папка</div>
+          <div class="folder__name">Домашний каталог</div>
         </div>
         <div class="folder__list">
           <div class="folder__item">
@@ -42,7 +50,7 @@
 .sidebar {
   background-color: $backgroundPrimaryColor;
   border-radius: $radius;
-  box-shadow: 0px 4px 4px $fontSecondaryColor;
+  box-shadow: 0px 4px 4px $shadowColor;
   width: 100%;
   height: 100%;
   padding: $padding;
@@ -72,7 +80,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 $padding $padding $padding;
   }
 
   &__path {
@@ -84,8 +91,18 @@
 .folder {
 
   &__item {
+    cursor: pointer;
     display: flex;
-    padding-bottom: $padding /2;
+    align-items: center;
+    padding: calc($padding/2) $padding;
+    transition: 0.1s ease;
+
+    &:not(.selected-folder):hover {
+      background-color: #fff;
+      box-shadow: 2px 2px 2px $shadowColor;
+      border-radius: $radius;
+      padding: calc($padding/2) $padding;
+    }
   }
 
   &__icon {
@@ -97,7 +114,7 @@
   }
 
   &__list {
-    padding: $padding/2 $padding;
+    padding: calc($padding /2) $padding;
   }
 }
 </style>

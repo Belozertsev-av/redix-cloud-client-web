@@ -84,7 +84,7 @@
   &__squere {
     transition: 0.05s ease-in;
     background-color: $primaryColor;
-    border-radius: $radius / 3;
+    border-radius: calc($padding /3);
   }
 }
 
